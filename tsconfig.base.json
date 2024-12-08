@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@office/books": ["libs/books/src/index.ts"],
+      "@office/cart": ["libs/cart/src/index.ts"],
+      "@office/cart-state": ["libs/cart-state/src/index.ts"],
       "@office/feed": ["libs/feed/src/index.ts"]
     }
   },

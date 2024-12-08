@@ -1,1 +1,4 @@
-<p>feed works!</p>
+<h2>My Amazing Feed:</h2>
+@for (book of books$ | async; track book.id) {
+  <lib-books [book]="book" (addToCart)="addToCart($event)"></lib-books>
+}
