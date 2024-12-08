@@ -15,5 +15,5 @@ import { CartService } from '@office/cart-state';
 export class CartComponent {
   cartService = inject(CartService);
 
-  cartBooks = this.cartService.cart;
+  cartBooks$ = this.cartService.getCart();
 }

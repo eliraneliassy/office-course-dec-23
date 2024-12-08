@@ -16,5 +16,5 @@ import { CartService } from '@office/cart-state';
 export class HeaderComponent {
   cartService = inject(CartService);
 
-  numberOfItemsInCart = this.cartService.cart.length;
+  numberOfItemsInCart$= this.cartService.getNumberOfItemsInCart();
 }
