@@ -16,6 +16,11 @@ export const appRoutes: Route[] = [
       import('@office/feed').then(c => c.FeedComponent)
   },
   {
+    path: 'swiper',
+    loadComponent: () =>
+      import('@office/feed').then(c => c.SwiperFeedComponent)
+  },
+  {
     path: 'cart',
     loadComponent: () =>
       import('@office/cart').then(c => c.CartComponent)

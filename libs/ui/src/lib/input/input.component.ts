@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, inject, Input, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR, NgControl } from '@angular/forms';
 
 @Component({
   selector: 'lib-input',
@@ -10,7 +10,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   styleUrl: './input.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
-    { provide: NG_VALUE_ACCESSOR, useExisting: InputComponent, multi: true },
+    // { provide: NG_VALUE_ACCESSOR, useExisting: InputComponent, multi: true },
   ]
 })
 export class InputComponent implements ControlValueAccessor {
@@ -21,6 +21,12 @@ export class InputComponent implements ControlValueAccessor {
   @Input() isPassword = false;
 
   @ViewChild('input') input?: ElementRef<any>;
+
+  ngControl = inject(NgControl);
+
+  constructor() {
+    this.ngControl.valueAccessor = this;
+  }
 
   userInput(value: string) {
 

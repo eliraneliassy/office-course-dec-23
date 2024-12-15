@@ -1,0 +1,11 @@
+<lib-swiper [slides]="slides" [slidesTemplate]="myTemplate"></lib-swiper>
+
+<ng-template #myTemplate let-name let-index="index"
+let-nav="navigation">
+  {{name}}
+  Index: {{index}}
+
+  <button (click)="nav.next()">MY OWN NEXT</button>
+</ng-template>
+
+

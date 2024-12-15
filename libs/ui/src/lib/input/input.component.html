@@ -5,3 +5,9 @@
        [disabled]="disabled"
        [type]="isPassword ? 'password' : 'text'"
 >
+
+@if(!ngControl.control?.valid &&
+ngControl.control?.touched) {
+  Not Valid
+}
+{{ngControl.control?.valueChanges | async}}
