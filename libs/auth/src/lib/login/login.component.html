@@ -1,0 +1,12 @@
+<h1>Please login</h1>
+
+<form [formGroup]="form">
+  <lib-input formControlName="userName"
+  placeholder="User Name"></lib-input>
+  <lib-input formControlName="password"
+             placeholder="Password"
+  [isPassword]="true"></lib-input>
+  <lib-button text="Login"></lib-button>
+
+  {{form.value | json}}
+</form>

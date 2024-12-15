@@ -1,0 +1,7 @@
+<input [placeholder]="placeholder"
+       #input
+       (input)="userInput($any($event.target).value)"
+       (blur)="onTouched($event)"
+       [disabled]="disabled"
+       [type]="isPassword ? 'password' : 'text'"
+>

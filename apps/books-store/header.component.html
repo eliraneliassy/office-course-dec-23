@@ -1,4 +1,5 @@
 <div class="container">
+  @if (isAuth$ | async) {
   <div class="links">
     <a routerLink="feed">Feed</a>
     <a routerLink="cart">Cart</a>
@@ -7,4 +8,5 @@
   <div class="cart-state">
     Number of items in cart: {{numberOfItemsInCart$ | async}}
   </div>
+  }
 </div>
