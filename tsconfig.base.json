@@ -18,7 +18,8 @@
       "@office/books": ["libs/books/src/index.ts"],
       "@office/cart": ["libs/cart/src/index.ts"],
       "@office/cart-state": ["libs/cart-state/src/index.ts"],
-      "@office/feed": ["libs/feed/src/index.ts"]
+      "@office/feed": ["libs/feed/src/index.ts"],
+      "@office/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

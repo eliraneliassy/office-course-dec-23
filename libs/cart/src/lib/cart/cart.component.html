@@ -1,4 +1,6 @@
 <h2>My Awesome Cart:</h2>
 @for (book of cartBooks$ | async; track book.id) {
-  <lib-books [book]="book"></lib-books>
+  <lib-books [book]="book"
+             (removeFromCart)="removeFromCart($event)"
+  ></lib-books>
 }

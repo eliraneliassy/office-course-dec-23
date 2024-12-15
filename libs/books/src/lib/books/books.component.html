@@ -9,6 +9,9 @@
       {{book.description}}
     </div>
 
-    <button (click)="addToCartHandler()">Add To Cart</button>
+<!--    <button (click)="addToCartHandler()">Add To Cart</button>-->
+    <lib-button text="Add To Cart" (clicked)="addToCartHandler()"
+                bgColor="green"></lib-button>
+    <lib-button text="Remove From Cart" (clicked)="removeFromCartHandler()"></lib-button>
   </div>
 }
